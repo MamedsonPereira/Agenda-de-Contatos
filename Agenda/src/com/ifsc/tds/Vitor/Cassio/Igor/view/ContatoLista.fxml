@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ifsc.tds.Vitor.Cassio.Igor.controller.ContatoListaController">
+   <children>
+      <SplitPane dividerPositions="0.35785953177257523" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tbvContato" layoutX="-6.0" layoutY="-2.0" prefHeight="400.0" prefWidth="223.0">
+                    <columns>
+                      <TableColumn fx:id="tbcCodigo" prefWidth="113.0" text="Código" />
+                      <TableColumn fx:id="tbcNome" prefWidth="108.0" text="Nome" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="14.0" text="Detalhes" />
+                  <GridPane layoutX="5.0" layoutY="65.0" prefHeight="96.0" prefWidth="198.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nome" />
+                        <Label text="Telefone" GridPane.rowIndex="1" />
+                        <Label fx:id="lblNomeContato" text="--" GridPane.columnIndex="1" />
+                        <Label fx:id="lblTelefoneContato" text="--" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="E-mail" GridPane.rowIndex="2" />
+                        <Label fx:id="lblEmailContato" text="--" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <ButtonBar layoutX="58.0" layoutY="337.0" prefHeight="40.0" prefWidth="253.0">
+                    <buttons>
+                      <Button fx:id="btnIncluir" mnemonicParsing="false" onAction="#onClickBtnIncluir" text="Incluir" />
+                        <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#onClickBtnEditar" text="Editar" />
+                        <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#onClickBtnExcluir" text="Excluir" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
