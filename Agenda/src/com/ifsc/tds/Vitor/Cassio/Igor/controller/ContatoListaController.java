@@ -89,7 +89,7 @@ public class ContatoListaController implements Initializable {
 
 			Alert alerta = new Alert(AlertType.CONFIRMATION);
 			alerta.setTitle("Pergunta");
-			alerta.setHeaderText("Confirma a exclus„o do Contato?\n" + Contato.getNome());
+			alerta.setHeaderText("Confirma a exclus√£o do Contato?\n" + Contato.getNome());
 
 			ButtonType botaoNao = ButtonType.NO;
 			ButtonType botaoSim = ButtonType.YES;

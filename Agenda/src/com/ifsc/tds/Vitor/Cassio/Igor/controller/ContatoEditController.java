@@ -90,8 +90,8 @@ public class ContatoEditController implements Initializable {
 		} else {
 			Alert alerta = new Alert(Alert.AlertType.ERROR);
 			alerta.initOwner(this.janelaContatoEdit);
-			alerta.setTitle("Dados inválidos!");
-			alerta.setHeaderText("Favor corrigir as seguintes informações:");
+			alerta.setTitle("Dados invÃ¡lidos!");
+			alerta.setHeaderText("Favor corrigir as seguintes informaÃ§Ãµes:");
 			alerta.setContentText(mensagemErros);
 			alerta.showAndWait();
 
