@@ -15,11 +15,9 @@ public class menu extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			// carregando o loader
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/ifsc/tds/Vitor/Cassio/Igor/view/ContatoLista.fxml"));
 			Parent menuXML = loader.load();
 
-			// carregando o controller e a scene
 			ContatoListaController menuController = loader.getController();
 			Scene menuLayout = new Scene(menuXML);
 
@@ -29,7 +27,6 @@ public class menu extends Application {
 			menuJanela.setScene(menuLayout);
 			menuJanela.setTitle("Menu do sistema");
 
-			// atribuindo evento para fechar janela
 			menuJanela.setOnCloseRequest(e -> {
 				if (menuController.onCloseQuery()) {
 					System.exit(0);
@@ -40,7 +37,6 @@ public class menu extends Application {
 
 			menuJanela.show();
 
-			// posicionando a janela no centro da tela do computador
 			Rectangle2D posicaoJanela = Screen.getPrimary().getVisualBounds();
 			menuJanela.setX((posicaoJanela.getWidth() - menuJanela.getWidth()) / 2);
 			menuJanela.setY((posicaoJanela.getHeight() - menuJanela.getHeight()) / 2);

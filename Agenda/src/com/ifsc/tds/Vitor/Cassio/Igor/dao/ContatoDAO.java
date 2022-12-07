@@ -15,13 +15,10 @@ public class ContatoDAO implements DAO<Contato> {
 		Contato contato = null;
 		String sql = "select * from contato where id = ?";
 
-		// Recupera a conexão com o banco
 		Connection conexao = null;
 
-		// Criar uma preparação da consulta
 		PreparedStatement stm = null;
 
-		// Criar uma classe que guarde o retorno da operação
 		ResultSet rset = null;
 
 		try {
@@ -35,7 +32,6 @@ public class ContatoDAO implements DAO<Contato> {
 			while (rset.next()) {
 				contato = new Contato();
 
-				// atribui campo para atributo
 				contato.setId(rset.getLong("id"));
 				contato.setNome(rset.getString("nome"));
 				contato.setTelefone(rset.getString("telefone"));
@@ -66,13 +62,10 @@ public class ContatoDAO implements DAO<Contato> {
 
 		String sql = "select * from contato";
 
-		// Recupera a conexão com o banco
 		Connection conexao = null;
 
-		// Criar uma preparação da consulta
 		PreparedStatement stm = null;
 
-		// Criar uma classe que guarde o retorno da operação
 		ResultSet rset = null;
 
 		try {
@@ -85,7 +78,6 @@ public class ContatoDAO implements DAO<Contato> {
 			while (rset.next()) {
 				Contato contato = new Contato();
 
-				// atribui campo para atributo
 				contato.setId(rset.getLong("id"));
 				contato.setNome(rset.getString("nome"));
 				contato.setTelefone(rset.getString("telefone"));
@@ -116,10 +108,8 @@ public class ContatoDAO implements DAO<Contato> {
 	public int save(Contato contato) {
 		String sql = "insert into contato (nome, telefone, email)" + " values (?, ?, ?)";
 
-		// Recupera a conexão com o banco
 		Connection conexao = null;
 
-		// Criar uma preparação da consulta
 		PreparedStatement stm = null;
 
 		try {
@@ -156,10 +146,8 @@ public class ContatoDAO implements DAO<Contato> {
 	public boolean update(Contato contato, String[] params) {
 		String sql = "update contato set nome = ?, telefone = ?, email = ? where id = ?";
 
-		// Recupera a conexão com o banco
 		Connection conexao = null;
 
-		// Criar uma preparação da consulta
 		PreparedStatement stm = null;
 
 		try {
@@ -196,10 +184,8 @@ public class ContatoDAO implements DAO<Contato> {
 	public boolean delete(Contato contato) {
 		String sql = "delete from contato where id = ?";
 
-		// Recupera a conexão com o banco
 		Connection conexao = null;
 
-		// Criar uma preparação da consulta
 		PreparedStatement stm = null;
 
 		try {

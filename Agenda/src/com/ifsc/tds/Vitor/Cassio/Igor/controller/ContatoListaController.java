@@ -189,11 +189,9 @@ public class ContatoListaController implements Initializable {
 
 	public boolean onShowTelaContatoEditar(Contato Contato, String operacao) {
 		try {
-			// carregando o loader
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/ifsc/tds/Vitor/Cassio/Igor/view/ContatoEdit.fxml"));
 			Parent ContatoEditXML = loader.load();
 
-			// criando uma janela nova
 			Stage janelaContatoEditar = new Stage();
 			janelaContatoEditar.setTitle("Cadastro de Contato" + operacao);
 			janelaContatoEditar.initModality(Modality.APPLICATION_MODAL);
@@ -202,12 +200,10 @@ public class ContatoListaController implements Initializable {
 			Scene ContatoEditLayout = new Scene(ContatoEditXML);
 			janelaContatoEditar.setScene(ContatoEditLayout);
 
-			// carregando o controller e a scene
 			ContatoEditController ContatoEditController = loader.getController();
 			ContatoEditController.setJanelaContatoEdit(janelaContatoEditar);
 			ContatoEditController.populaTela(Contato);
 
-			// mostrando a tela
 			janelaContatoEditar.showAndWait();
 
 			return ContatoEditController.isOkClick();

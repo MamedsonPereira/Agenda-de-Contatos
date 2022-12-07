@@ -67,6 +67,7 @@ public class ContatoEditController implements Initializable {
 
 		this.txtNome.setText(contato.getNome());
 		this.txtTelefone.setText(contato.getTelefone());
+		this.txtEmail.setText(contato.getEmail());
 	}
 	
 	@Override
